@@ -1,0 +1,131 @@
+:root {
+  --myEDPT: 200;
+  --myEHLT: 20;
+  --myMORF: 0;
+}
+
+@font-face {
+  font-family: 'Nabla';
+  src:
+    url('./fonts/Nabla-Regular-VariableFont_EDPT_EHLT.ttf') format('opentype') tech(color-colrv1)
+}
+
+/* @font-palette-values --alt {
+  font-family: 'Nabla';
+  override-colors:
+    0 #ODOOFF,
+    1 #FFOODB,
+    2 #FF3000,
+    3 #FF3000,
+    4 #FFAB3E,
+    5 #FFD6A0,
+
+} */
+
+@font-face {
+  font-family: 'Kablammo';
+  src: url('./fonts/Kablammo-Regular-VariableFont_MORF.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(210, 210, 210);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title {
+  padding-left: 20%;
+  padding-right: 20%;
+  font-family: 'Nabla';
+  text-align: center;
+  user-select: none;
+  font-size: 16rem;
+  color: aliceblue;
+  font-variation-settings:
+    'EDPT' var(--myEDPT),
+    'EHLT' var(--myEHLT);
+}
+
+.marquee {
+  text-align: center;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.horizontal-section-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 100vh;
+}
+
+.content-box-left-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100vh;
+}
+
+.subtitle-1 {
+  font-family: 'Kablammo';
+  font-size: 8rem;
+  font-variation-settings: 
+  'MORF' var(--myMORF);
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: -50px;
+  text-align: center;
+  text-shadow: 3px 3px 3px rgb(92, 181, 3);
+  color: black;
+
+  padding: 0.5em 0;
+  justify-content: center;
+
+}
+
+.content-box-right-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100vh;
+  background-color: rgb(92, 181, 3);
+}
+.content-box1-container {
+  overflow: hidden;
+  background-color: rgb(92, 181, 3);
+
+}
+.content-box-img {
+  width:1000px;
+  overflow:hidden;
+  position: relative;
+  left: 900px;
+  background-color: rgb(92, 181, 3);
+}
+
+.horizontal-section-2 {
+  display: flex;
+  height: 100vh;
+}
+
+
+.content-box-left-2 {
+  width: 50%;
+  height: 100vh;
+  /* Remove the 'align-self' property */
+  background-color: black;
+}
